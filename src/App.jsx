@@ -1,30 +1,29 @@
-import Logo from './components/Logo';
-import ThemeToggle from './components/ThemeToggle';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+
+// Temporary dummy pages to test routing and Layout
+const DummyPage = ({ title }) => (
+  <div className="container mx-auto px-6 md:px-12 py-20 flex flex-col items-center justify-center min-h-[60vh]">
+    <h1 className="text-display text-accent font-serif text-center mb-6">{title}</h1>
+    <p className="text-ink-muted text-center text-title-3 max-w-2xl">
+      This is a placeholder for the {title} page content.
+    </p>
+  </div>
+);
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-bg text-ink font-sans transition-colors duration-300 flex flex-col items-center justify-center p-8">
-      <div className="absolute top-8 right-8">
-        <ThemeToggle />
-      </div>
-      
-      <div className="max-w-md w-full mb-8">
-        <Logo className="w-48 h-auto mx-auto" />
-      </div>
-
-      <h1 className="text-display text-accent font-serif text-center">Alzina Attorneys</h1>
-      <p className="text-ink-muted mt-4 text-center text-title-3 max-w-2xl mx-auto">
-        Corporate & Commercial Law Practice
-      </p>
-
-      <div className="mt-8 flex gap-4">
-        <button className="px-8 py-4 bg-accent text-white font-medium rounded-sm shadow-md hover:bg-oxblood-700 transition-colors">
-          Book Consultation
-        </button>
-        <button className="px-8 py-4 border border-accent text-accent font-medium rounded-sm hover:bg-bg-subtle transition-colors">
-          Our Practice
-        </button>
-      </div>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<DummyPage title="Home" />} />
+          <Route path="about" element={<DummyPage title="About Us" />} />
+          <Route path="practice-areas" element={<DummyPage title="Practice Areas" />} />
+          <Route path="insights" element={<DummyPage title="Insights" />} />
+          <Route path="contact" element={<DummyPage title="Contact" />} />
+          <Route path="*" element={<DummyPage title="404 Not Found" />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
