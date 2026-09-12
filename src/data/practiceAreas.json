@@ -1,0 +1,54 @@
+[
+  {
+    "id": "corporate-law",
+    "title": "Corporate Law",
+    "shortDescription": "Comprehensive counsel for corporate governance, mergers, acquisitions, and compliance.",
+    "fullDescription": "We guide clients through the entire lifecycle of corporate transactions, from due diligence and deal structuring to regulatory approvals and post-merger integration. Our practice ensures robust corporate governance and seamless regulatory compliance.",
+    "keyServices": [
+      "Mergers and acquisitions",
+      "Corporate governance and compliance",
+      "Joint ventures and strategic alliances",
+      "Business restructuring"
+    ],
+    "icon": "Building"
+  },
+  {
+    "id": "litigation",
+    "title": "Litigation & Arbitration",
+    "shortDescription": "Strategic dispute resolution and commercial litigation across all jurisdictions.",
+    "fullDescription": "We represent corporations, financial institutions, and individuals in complex civil and commercial disputes. Our practice spans litigation before superior courts and arbitration, focusing on achieving swift, commercially sensible resolutions.",
+    "keyServices": [
+      "Commercial and corporate litigation",
+      "Civil litigation and dispute resolution",
+      "Alternative Dispute Resolution (ADR)",
+      "Appellate practice"
+    ],
+    "icon": "Scale"
+  },
+  {
+    "id": "real-estate",
+    "title": "Real Estate",
+    "shortDescription": "Expert legal guidance in property acquisition, development, and financing.",
+    "fullDescription": "Our real estate practice advises developers, investors, and individuals on all aspects of property law. We provide end-to-end legal support for acquisitions, commercial leasing, property development, and real estate financing.",
+    "keyServices": [
+      "Property acquisitions and sales",
+      "Commercial leasing and tenancy",
+      "Real estate development and financing",
+      "Title investigation and perfection"
+    ],
+    "icon": "Home"
+  },
+  {
+    "id": "family-law",
+    "title": "Family Law",
+    "shortDescription": "Compassionate and confidential legal support for family and matrimonial matters.",
+    "fullDescription": "We provide sensitive, strategic counsel in all areas of family law, prioritizing the protection of our clients' interests. From complex divorce proceedings to wealth preservation and child custody matters, we handle cases with the utmost discretion.",
+    "keyServices": [
+      "Divorce and matrimonial proceedings",
+      "Child custody and support",
+      "Pre-nuptial agreements",
+      "Wills and succession planning"
+    ],
+    "icon": "Users"
+  }
+]
