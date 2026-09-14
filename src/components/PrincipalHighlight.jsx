@@ -32,7 +32,7 @@ export default function PrincipalHighlight() {
             animate={controls}
             className="w-full lg:w-1/2"
           >
-            <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none">
+            <div className="relative aspect-4/5 w-full max-w-md mx-auto lg:max-w-none">
               {/* Decorative background block */}
               <div className="absolute inset-0 bg-bg-subtle translate-x-6 translate-y-6 rounded-sm border border-border"></div>
               <img 

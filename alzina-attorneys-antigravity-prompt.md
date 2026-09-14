@@ -309,6 +309,7 @@ https://wa.me/2348032283805?text=<url-encoded message>
 11. Insights, Careers, 404 (if included).
 12. Accessibility + performance + reduced-motion pass across the whole site.
 13. Final cross-browser/theme/device QA pass: toggle dark/light on every page, resize through breakpoints, test carousel touch/swipe, test WhatsApp link on mobile, test form submission end-to-end.
+14. Do not leave the backgrounds of UI components bare. Always add either a background image, or watermark or anything.
 
 ---
 

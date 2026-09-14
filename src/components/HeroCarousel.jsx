@@ -7,25 +7,25 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const SLIDES = [
   {
     id: 1,
-    headline: "Law with Distinction",
+    headline: "Securing Your Assets",
     subhead:
-      "Setting bold new levels of legal excellence in Nigeria and beyond.",
+      "Comprehensive and seamless property management. We manage your real estate so you can focus on growth.",
     image:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 2,
-    headline: "Strategic Dispute Resolution",
+    headline: "Protecting Your Rights",
     subhead:
-      "Formidable representation in commercial litigation and alternative dispute resolution, focused on rapid, commercially sensible outcomes.",
+      "Alzina Attorneys brings formidable representation and delivers results when it matter most.",
     image:
       "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 3,
-    headline: "Protecting Your Legacy",
+    headline: "Law with Distinction",
     subhead:
-      "Confidential, expert support for complex family law, wealth protection, and succession planning matters.",
+      "Setting bold new levels of legal excellence in Nigeria and beyond.",
     image:
       "https://images.unsplash.com/photo-1554457606-ed16c39db884?w=900&auto=format&fit=crop&w=1920&q=80",
   },
@@ -67,7 +67,7 @@ export default function HeroCarousel() {
   }, [emblaApi]);
 
   return (
-    <div className="relative w-full h-[calc(100vh-5rem)] min-h-[600px] overflow-hidden bg-oxblood-900">
+    <div className="relative w-full h-[calc(100vh-5rem)] min-h-150 overflow-hidden bg-oxblood-900">
       {/* 1. Crossfading High-Quality Background Images */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="popLayout">
@@ -83,9 +83,9 @@ export default function HeroCarousel() {
           />
         </AnimatePresence>
         
-        {/* Dark overlay to ensure text contrast */}
-        <div className="absolute inset-0 bg-oxblood-900/60 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Gradient overlays to ensure text contrast on the left without darkening the whole image too much */}
+        <div className="absolute inset-0 bg-linear-to-r from-oxblood-900/60 via-oxblood-900/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-black/50 via-black/10 to-transparent"></div>
       </div>
 
       {/* 2. Embla Swipe Target (Invisible but functional) */}
@@ -98,7 +98,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* 3. Text Overlay (Animated by Motion) */}
-      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col justify-center items-center px-16 md:px-24 text-center">
+      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col justify-center items-start px-16 md:px-28 xl:px-40 text-left">
         
         {/* Navigation Arrows */}
         <div className="absolute inset-y-0 left-4 md:left-8 flex items-center pointer-events-auto">
@@ -115,16 +115,22 @@ export default function HeroCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-4xl"
+            className="max-w-4xl pt-10"
           >
-            <h1 className="text-display font-serif text-white mb-6 leading-tight">
+            <h1 
+              className="text-display text-white mb-6 leading-tight drop-shadow-sm" 
+              style={{ fontFamily: 'var(--font-hero-serif)' }}
+            >
               {SLIDES[selectedIndex].headline}
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+            <p 
+              className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed drop-shadow-sm" 
+              style={{ fontFamily: 'var(--font-hero-sans)' }}
+            >
               {SLIDES[selectedIndex].subhead}
             </p>
           </motion.div>

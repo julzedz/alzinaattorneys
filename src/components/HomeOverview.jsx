@@ -51,7 +51,7 @@ export default function HomeOverview() {
           animate={controls}
           className="text-title-2 font-serif mb-10 leading-snug"
         >
-          Delivering trusted legal representation and business solutions to our clients'
+          Delivering trusted legal representation and business solutions for our clients'
           legal challenges across Nigeria.
         </motion.h2>
 
@@ -70,7 +70,7 @@ export default function HomeOverview() {
         >
           <span id="alzina-ethos" className="text-2xl font-serif text-accent tracking-wide font-medium">Alzina Attorneys</span> is a premier corporate and commercial law
           practice located in Onitsha, Nigeria. We operate at the intersection of complex legal frameworks
-          and dynamic business environments, representing our clients can execute
+          and dynamic business environments, representing our clients to execute
           transactions and resolve disputes with absolute confidence.
         </motion.p>
 
