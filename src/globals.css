@@ -31,11 +31,11 @@
 }
 
 [data-theme="dark"] {
-  --bg: #120707;
-  --bg-subtle: #1C0D0D;
+  --bg: #2D1F1F;
+  --bg-subtle: #382828;
   --ink: #F5EDEC;
   --ink-muted: #C9B7B5;
-  --border: #3A1C1C;
+  --border: #4A2F2F;
   --accent: var(--oxblood-300);
 }
 

@@ -7,21 +7,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const SLIDES = [
   {
     id: 1,
-    headline: 'Definitive Corporate Counsel',
-    subhead: 'Guiding enterprise clients through high-stakes mergers, complex governance, and strategic real estate acquisitions.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80',
+    headline: "Law with Distinction",
+    subhead:
+      "Setting bold new levels of legal excellence in Nigeria and beyond.",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 2,
-    headline: 'Strategic Dispute Resolution',
-    subhead: 'Formidable representation in commercial litigation and alternative dispute resolution, focused on rapid, commercially sensible outcomes.',
-    image: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=80',
+    headline: "Strategic Dispute Resolution",
+    subhead:
+      "Formidable representation in commercial litigation and alternative dispute resolution, focused on rapid, commercially sensible outcomes.",
+    image:
+      "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 3,
-    headline: 'Protecting Your Legacy',
-    subhead: 'Confidential, expert support for complex family law, wealth protection, and succession planning matters.',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80',
+    headline: "Protecting Your Legacy",
+    subhead:
+      "Confidential, expert support for complex family law, wealth protection, and succession planning matters.",
+    image:
+      "https://images.unsplash.com/photo-1554457606-ed16c39db884?w=900&auto=format&fit=crop&w=1920&q=80",
   },
 ];
 
