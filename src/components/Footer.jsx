@@ -6,18 +6,18 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-bg-subtle border-t border-border pt-16 pb-8 px-6 md:px-12 mt-20">
+    <footer className="bg-bg-subtle border-t border-border pt-20 pb-10 px-6 md:px-12 mt-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           {/* Brand & Blurb */}
           <div className="lg:col-span-4">
             <Link
               to="/"
-              className="inline-block mb-6 w-48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
+              className="inline-block mb-8 w-48 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
             >
               <Logo />
             </Link>
-            <p className="text-ink-muted text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-ink-muted text-base font-serif font-light leading-relaxed mb-8 max-w-sm">
               Alzina Attorneys provides trusted, result-driven legal
               representation with dedication and precision. We offer strategic
               counsel across various practice areas, including corporate law,
@@ -28,7 +28,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/alzinaattorneys"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 bg-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="p-2 border border-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -51,7 +51,7 @@ export default function Footer() {
                 href="https://x.com/alzinaattorneys"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 bg-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="p-2 border border-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label="X (Twitter)"
               >
                 <svg
@@ -68,7 +68,7 @@ export default function Footer() {
                 href="https://facebook.com/alzinaattorneys"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 bg-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="p-2 border border-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label="Facebook"
               >
                 <svg
@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://instagram.com/alzinaattorneys"
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 bg-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="p-2 border border-border text-ink hover:bg-accent hover:text-white rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label="Instagram"
               >
                 <svg
@@ -113,14 +113,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-ink mb-6">
+            <h3 className="text-xl font-serif text-ink mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
               Firm
             </h3>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 mt-4">
               <li>
                 <Link
                   to="/about"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   About Us
                 </Link>
@@ -128,7 +128,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/practice-areas"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Practice Areas
                 </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/insights"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Insights
                 </Link>
@@ -144,7 +144,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Contact
                 </Link>
@@ -154,14 +154,14 @@ export default function Footer() {
 
           {/* Practice Areas (Featured) */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-ink mb-6">
+            <h3 className="text-xl font-serif text-ink mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
               Expertise
             </h3>
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 mt-4">
               <li>
                 <Link
                   to="/practice-areas#corporate-law"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Corporate Law
                 </Link>
@@ -169,7 +169,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/practice-areas#litigation"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Litigation & Arbitration
                 </Link>
@@ -177,7 +177,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/practice-areas#real-estate"
-                  className="text-ink-muted hover:text-accent transition-colors text-sm"
+                  className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
                   Real Estate
                 </Link>
@@ -185,9 +185,9 @@ export default function Footer() {
               <li>
                 <Link
                   to="/practice-areas"
-                  className="text-accent font-medium text-sm hover:underline"
+                  className="text-accent font-serif font-medium text-base hover:italic transition-all mt-2 inline-block"
                 >
-                  View All Practices →
+                  View All Practices &rarr;
                 </Link>
               </li>
             </ul>
@@ -195,31 +195,31 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-ink mb-6">
+            <h3 className="text-xl font-serif text-ink mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-8 after:h-0.5 after:bg-accent">
               Contact
             </h3>
-            <ul className="flex flex-col gap-5">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-sm text-ink-muted leading-relaxed">
+            <ul className="flex flex-col gap-6 mt-4">
+              <li className="flex items-start gap-4">
+                <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
+                <span className="text-base font-serif font-light text-ink-muted leading-relaxed">
                   60 Old Market Road, <br />
                   Onitsha, Nigeria
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <a
                   href="tel:+2348032283805"
-                  className="text-sm text-ink-muted hover:text-accent transition-colors"
+                  className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
                 >
                   +234 803 228 3805
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
                   href="mailto:alzinaattorneys@gmail.com"
-                  className="text-sm text-ink-muted hover:text-accent transition-colors"
+                  className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
                 >
                   alzinaattorneys@gmail.com
                 </a>
@@ -230,10 +230,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-ink-muted">
+          <p className="text-xs text-ink-muted font-serif uppercase tracking-widest">
             &copy; {currentYear} Alzina Attorneys. All rights reserved.
           </p>
-          <p className="text-xs text-ink-muted">
+          <p className="text-xs text-ink-muted font-serif uppercase tracking-widest">
             Site by{" "}
             <a
               href="https://github.com/julzedz"

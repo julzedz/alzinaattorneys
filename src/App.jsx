@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import SmoothScroll from './components/SmoothScroll';
+import Home from './pages/Home';
+import PracticeAreas from './pages/PracticeAreas';
 
 // Temporary dummy pages to test routing and Layout
 const DummyPage = ({ title }) => (
@@ -18,9 +20,9 @@ export default function App() {
       <SmoothScroll>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<DummyPage title="Home" />} />
+            <Route index element={<Home />} />
             <Route path="about" element={<DummyPage title="About Us" />} />
-            <Route path="practice-areas" element={<DummyPage title="Practice Areas" />} />
+            <Route path="practice-areas" element={<PracticeAreas />} />
             <Route path="insights" element={<DummyPage title="Insights" />} />
             <Route path="contact" element={<DummyPage title="Contact" />} />
             <Route path="*" element={<DummyPage title="404 Not Found" />} />
