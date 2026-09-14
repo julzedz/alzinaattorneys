@@ -3,6 +3,7 @@ import { motion, useInView, useAnimation } from 'motion/react';
 import { Link } from 'react-router-dom';
 import principalImg from '../assets/principal-1-desktop.webp';
 import teamData from '../data/team.json';
+import AnimatedBackground from './AnimatedBackground';
 
 export default function PrincipalHighlight() {
   const ref = useRef(null);
@@ -18,8 +19,9 @@ export default function PrincipalHighlight() {
   }, [isInView, controls]);
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-bg text-ink overflow-hidden" ref={ref}>
-      <div className="container mx-auto">
+    <section className="relative py-24 px-6 md:px-12 bg-bg text-ink overflow-hidden" ref={ref}>
+      <AnimatedBackground />
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* Image Side */}
