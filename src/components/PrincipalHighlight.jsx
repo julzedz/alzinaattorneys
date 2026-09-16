@@ -58,7 +58,7 @@ export default function PrincipalHighlight() {
           >
             <h2 className="text-title-2 font-serif mb-6">Leadership & Vision</h2>
             <p className="text-lg text-ink-muted leading-relaxed mb-8">
-              "We built Alzina Attorneys on the premise that effective legal counsel must go beyond technical proficiency. It requires a profound understanding of our clients' commercial objectives and the agility to navigate complex regulatory landscapes. Our commitment is to deliver results that protect and propel your business."
+              "We built Alzina Attorneys on the premise that effective legal counsel must go beyond technical proficiency. It requires a profound understanding of our clients' objectives and the agility to navigate Nigeria's complex legal landscapes. Our commitment is to deliver results that protect and propel your business."
             </p>
             
             <div className="mb-10">

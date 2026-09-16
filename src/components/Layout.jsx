@@ -20,7 +20,7 @@ export default function Layout() {
     <div className="flex flex-col min-h-screen">
       <Preloader />
       <Header />
-      <main className="flex-grow pt-20">
+      <main className="grow pt-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
