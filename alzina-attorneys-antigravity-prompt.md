@@ -1,7 +1,5 @@
 # ALZINA ATTORNEYS — WEBSITE BUILD SPEC
 
-**Two things to confirm before Antigravity starts (flagging, not blocking):**
-1. The consultation-form destination email was given as `edoziechukwuma216@gmail` — this is missing the domain. Confirm it should be `edoziechukwuma216@gmail.com` before wiring Formspree.
 
 ## 1. PROJECT OVERVIEW
 
@@ -196,7 +194,7 @@ Two-column layout on desktop (stacked on mobile):
   - Email field placeholder: `"e.g. chi.okonkwo@gmail.com"`
   - Subject field placeholder: `"e.g. Commercial lease dispute"`
   - Message field placeholder: `"e.g. I need advice on a breach of contract relating to a supply agreement..."`
-- Submits via Formspree (`@formspree/react` `useForm`), destination email to be confirmed (Section 0).
+- Submits via Formspree (`@formspree/react` `useForm`), destination email - alzinaattorneys@gmail.com.
 - On success: inline confirmation state (not just an alert) — "Thank you, [name]. We'll be in touch within 1 business day." with a subtle Motion success animation (checkmark draw-in).
 - Client-side validation (required fields, email format) before submit; disable the submit button and show a loading state during submission.
 
@@ -253,7 +251,7 @@ gsap.ticker.lagSmoothing(0)
 ## 8. INTEGRATIONS
 
 ### 8.1 Formspree
-- Create/confirm a Formspree form endpoint tied to the (confirmed) destination email.
+- Create/confirm a Formspree form endpoint tied to the email.
 - Use `@formspree/react`'s `useForm(formId)` hook; do not roll a custom fetch unless Formspree's hook proves insufficient.
 - Include a honeypot or Formspree's built-in spam filtering to cut down on junk submissions to a public-facing legal inquiry form.
 
@@ -305,7 +303,7 @@ https://wa.me/2348032283805?text=<url-encoded message>
 7. Home page: hero carousel first (highest-risk/most complex component), then the below-fold sections in order.
 8. Practice Areas page.
 9. About page.
-10. Contact page: layout + map embed first, then wire Formspree last (once the destination email is confirmed).
+10. Contact page: layout + map embed first, then wire Formspree last.
 11. Insights, Careers, 404 (if included).
 12. Accessibility + performance + reduced-motion pass across the whole site.
 13. Final cross-browser/theme/device QA pass: toggle dark/light on every page, resize through breakpoints, test carousel touch/swipe, test WhatsApp link on mobile, test form submission end-to-end.
