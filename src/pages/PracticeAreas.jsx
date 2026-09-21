@@ -82,14 +82,14 @@ export default function PracticeAreas() {
         </div>
       </section>
 
-      {/* 2. Practice Areas Grid */}
-      <section className="py-24 px-6 md:px-12 bg-bg text-ink" ref={containerRef}>
-        <div className="container mx-auto max-w-6xl">
+      {/* 2. Practice Areas Editorial List */}
+      <section className="py-24 md:py-32 px-6 md:px-12 bg-bg text-ink" ref={containerRef}>
+        <div className="container mx-auto max-w-5xl">
           <motion.div 
             variants={staggerContainer}
             initial="hidden"
             animate={controls}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"
+            className="flex flex-col"
           >
             {practiceAreas.map((area) => {
               const Icon = Icons[area.icon] || Icons.Scale;
@@ -98,30 +98,28 @@ export default function PracticeAreas() {
                   key={area.id} 
                   id={area.id}
                   variants={staggerItem} 
-                  whileHover={{ y: -8 }}
-                  className="bg-bg-subtle p-8 md:p-12 rounded-sm border border-border transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 hover:border-accent group scroll-mt-32"
+                  className="flex flex-col md:flex-row items-start gap-8 md:gap-16 py-12 md:py-16 border-b border-border last:border-0 scroll-mt-32"
                 >
-                  <div className="flex items-center gap-6 mb-8">
-                    <div className="w-16 h-16 bg-bg rounded-sm flex items-center justify-center shrink-0 border border-border group-hover:bg-accent group-hover:text-white transition-colors text-accent">
-                      <Icon className="w-8 h-8" />
-                    </div>
-                    <h2 className="text-title-2 font-serif group-hover:text-accent transition-colors">{area.title}</h2>
+                  <div className="md:w-1/3 shrink-0 flex flex-col gap-6">
+                    <Icon className="w-10 h-10 stroke-1 text-accent/60" />
+                    <h2 className="text-3xl md:text-4xl font-serif text-ink tracking-tight">
+                      {area.title}
+                    </h2>
                   </div>
                   
-                  <p className="text-lg text-ink-muted leading-relaxed mb-8">
-                    {area.fullDescription}
-                  </p>
-                  
-                  <div className="bg-bg p-6 rounded-sm border border-border">
-                    <h3 className="text-sm font-bold uppercase tracking-wider text-ink mb-4">Key Services</h3>
-                    <ul className="space-y-3">
-                      {area.keyServices.map((service, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div>
-                          <span className="text-ink-muted leading-relaxed">{service}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="md:w-2/3 flex flex-col justify-center">
+                    <p className="text-lg md:text-xl text-ink-muted leading-relaxed font-light mb-8">
+                      {area.fullDescription}
+                    </p>
+                    
+                    <div className="pt-6 border-t border-border/40">
+                      <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-ink/40 mb-4">
+                        Key Focus Areas
+                      </h3>
+                      <p className="text-base text-ink-muted font-serif italic leading-relaxed">
+                        {area.keyServices.join('  ·  ')}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               );
