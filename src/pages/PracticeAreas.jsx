@@ -32,24 +32,53 @@ export default function PracticeAreas() {
   return (
     <div className="w-full">
       {/* 1. Hero Section */}
-      <section className="bg-oxblood-900 py-24 md:py-32 px-6 md:px-12 text-center">
-        <div className="container mx-auto max-w-4xl">
+      <section className="relative py-32 md:py-48 px-6 md:px-12 text-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80" 
+            alt="Corporate Office Background" 
+            className="w-full h-full object-cover object-center"
+          />
+          {/* Overlays for readability and brand color */}
+          <div className="absolute inset-0 bg-oxblood-900/60 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-4xl relative z-10 pb-12">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-display font-serif text-white mb-6"
+            className="text-display font-serif text-white drop-shadow-md"
           >
             Our Expertise
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+        </div>
+      </section>
+
+      {/* 1.5 Overview Box (Overlapping) */}
+      <section className="relative z-20 -mt-24 px-6 md:px-12">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-bg p-8 md:p-12 lg:p-16 shadow-2xl border border-border flex flex-col md:flex-row gap-8 md:gap-16 items-center rounded-sm"
           >
-            We operate at the intersection of complex legal frameworks and dynamic business environments, delivering uncompromising representation and strategic foresight.
-          </motion.p>
+            <div className="md:w-1/3 shrink-0">
+              <h2 className="text-4xl md:text-5xl font-serif text-ink/30 tracking-tight">
+                Overview
+              </h2>
+            </div>
+            <div className="md:w-2/3">
+              <p 
+                className="text-base md:text-lg text-ink-muted/70 leading-relaxed font-extralight"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              >
+                We are a boutique law firm that specializes in providing sophisticated legal solutions that help our clients navigate complexity, manage risks and make informed, commercially sound business decisions. We are committed to excellence and our team's legal knowledge, ensures our clients receive practical and strategic advice. From litigation to real estate acquisition and management.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
