@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import SmoothScroll from './components/SmoothScroll';
 import Home from './pages/Home';
 import PracticeAreas from './pages/PracticeAreas';
+import About from './pages/About';
 
 // Temporary dummy pages to test routing and Layout
 const DummyPage = ({ title }) => (
@@ -21,7 +22,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about" element={<DummyPage title="About Us" />} />
+            <Route path="about" element={<About />} />
             <Route path="practice-areas" element={<PracticeAreas />} />
             <Route path="insights" element={<DummyPage title="Insights" />} />
             <Route path="contact" element={<DummyPage title="Contact" />} />
