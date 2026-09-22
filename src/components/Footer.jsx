@@ -135,10 +135,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/insights"
+                  to="/careers"
                   className="text-ink-muted font-serif text-base hover:text-accent hover:italic transition-all"
                 >
-                  Insights
+                  Careers
                 </Link>
               </li>
               <li>

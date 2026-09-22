@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about' },
   { name: 'Practice Areas', path: '/practice-areas' },
-  { name: 'Insights', path: '/insights' },
+  { name: 'Careers', path: '/careers' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -74,8 +74,8 @@ export default function Header() {
             <Link to="/practice-areas" className="text-ink font-serif text-lg hover:text-accent hover:italic transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2">
               Practice Areas
             </Link>
-            <Link to="/insights" className="text-ink font-serif text-lg hover:text-accent hover:italic transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2">
-              Insights
+            <Link to="/careers" className="text-ink font-serif text-lg hover:text-accent hover:italic transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2">
+              Careers
             </Link>
             
             <ThemeToggle />

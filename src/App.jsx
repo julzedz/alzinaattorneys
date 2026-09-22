@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import PracticeAreas from './pages/PracticeAreas';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Careers from './pages/Careers';
 
 // Temporary dummy pages to test routing and Layout
 const DummyPage = ({ title }) => (
@@ -25,7 +26,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="practice-areas" element={<PracticeAreas />} />
-            <Route path="insights" element={<DummyPage title="Insights" />} />
+            <Route path="careers" element={<Careers />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<DummyPage title="404 Not Found" />} />
           </Route>
