@@ -98,7 +98,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* 3. Text Overlay (Animated by Motion) */}
-      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col justify-center items-start px-16 md:px-28 xl:px-40 text-left">
+      <div className="absolute inset-0 z-20 pointer-events-none flex flex-col justify-center items-start px-14 sm:px-20 md:px-28 xl:px-40 text-left">
         
         {/* Navigation Arrows */}
         <div className="absolute inset-y-0 left-4 md:left-8 flex items-center pointer-events-auto">
@@ -115,20 +115,20 @@ export default function HeroCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedIndex}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-4xl pt-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-4xl"
           >
             <h1 
-              className="text-display text-white mb-6 leading-tight drop-shadow-sm" 
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-[1.1] drop-shadow-lg" 
               style={{ fontFamily: 'var(--font-hero-serif)' }}
             >
               {SLIDES[selectedIndex].headline}
             </h1>
             <p 
-              className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed drop-shadow-sm" 
+              className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed drop-shadow-md font-light" 
               style={{ fontFamily: 'var(--font-hero-sans)' }}
             >
               {SLIDES[selectedIndex].subhead}
