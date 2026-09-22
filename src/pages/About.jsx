@@ -86,7 +86,7 @@ export default function About() {
                     className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
-                <h2 className="text-4xl font-serif mb-3">Paschal Alzina, Esq.</h2>
+                <h2 className="text-4xl font-serif mb-3">Pascal Zimuzo Ozuligbo, Esq.</h2>
                 <p className="text-accent text-sm uppercase tracking-[0.2em] font-bold">Principal Partner</p>
               </motion.div>
             </div>
@@ -104,7 +104,7 @@ export default function About() {
                   <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white/50 mb-8">Biography</h3>
                   <div className="space-y-6">
                     <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
-                      Paschal Alzina is a highly regarded legal practitioner known for his sharp commercial insight and unwavering dedication to his clients. With extensive experience across multiple practice areas, he brings a strategic and results-driven approach to every mandate.
+                      Pascal Zimuzo Ozuligbo is a highly regarded legal practitioner known for his sharp commercial insight and unwavering dedication to his clients. With extensive experience across multiple practice areas, he brings a strategic and results-driven approach to every mandate.
                     </p>
                     <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light">
                       Under his leadership, Alzina Attorneys has grown into a formidable practice, recognized for setting bold new levels of legal excellence. His counsel is sought after by corporations, high-net-worth individuals, and emerging enterprises navigating complex legal and regulatory environments.
@@ -112,15 +112,18 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Certifications */}
+                {/* Education & Certifications */}
                 <div className="border-t border-white/20 pt-10">
-                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-ink-muted mb-8">Certifications</h3>
+                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-ink-muted mb-8">Education & Certifications</h3>
                   <div className="space-y-6">
                     <p className="text-xl md:text-2xl text-white/90 font-serif italic border-l-[3px] border-accent pl-6">
-                      LL.B, Nnamdi Azikiwe University, Awka
+                      LL.B, Chukwuemeka Odumegwu Ojukwu University, Igbariam
                     </p>
                     <p className="text-xl md:text-2xl text-white/90 font-serif italic border-l-[3px] border-accent pl-6">
-                      B.L., Nigerian Law School
+                      B.A (International Relations), Nnamdi Azikiwe University, Awka
+                    </p>
+                    <p className="text-xl md:text-2xl text-white/90 font-serif italic border-l-[3px] border-accent pl-6">
+                      Diploma in French, Université D’Abomey Calavi, Benin Republic
                     </p>
                   </div>
                 </div>

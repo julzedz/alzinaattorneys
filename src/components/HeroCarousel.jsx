@@ -67,7 +67,7 @@ export default function HeroCarousel() {
   }, [emblaApi]);
 
   return (
-    <div className="relative w-full h-[calc(100svh-60px)] md:h-[calc(100vh-5rem)] min-h-[500px] md:min-h-[600px] overflow-hidden bg-oxblood-900">
+    <div className="relative w-full h-[calc(100svh-60px)] md:h-[calc(100vh-5rem)] min-h-125 md:min-h-150 overflow-hidden bg-oxblood-900">
       {/* 1. Crossfading High-Quality Background Images */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="popLayout">

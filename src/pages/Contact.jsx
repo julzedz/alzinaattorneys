@@ -65,7 +65,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-ink/50 mb-2">Office Address</h3>
                       <p className="text-lg text-ink-muted leading-relaxed">
-                        60 Old Market Road,<br />
+                        70B Old Market Road,<br />
                         Onitsha, Nigeria
                       </p>
                     </div>
@@ -78,11 +78,18 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-ink/50 mb-2">Phone / WhatsApp</h3>
-                      <a href="https://wa.me/2348032283805?text=Hello%20Alzina%20Attorneys,%20I%20would%20like%20to%20schedule%20a%20consultation." 
-                         target="_blank" rel="noreferrer"
-                         className="text-lg text-ink-muted hover:text-accent transition-colors">
-                        +234 803 228 3805
-                      </a>
+                      <div className="flex flex-col gap-1">
+                        <a href="https://wa.me/2348032283805?text=Hello%20Alzina%20Attorneys,%20I%20would%20like%20to%20schedule%20a%20consultation." 
+                           target="_blank" rel="noreferrer"
+                           className="text-lg text-ink-muted hover:text-accent transition-colors">
+                          +234 803 228 3805
+                        </a>
+                        <a href="https://wa.me/2348034401838?text=Hello%20Alzina%20Attorneys,%20I%20would%20like%20to%20schedule%20a%20consultation." 
+                           target="_blank" rel="noreferrer"
+                           className="text-lg text-ink-muted hover:text-accent transition-colors">
+                          +234 803 440 1838
+                        </a>
+                      </div>
                     </div>
                   </div>
 
@@ -93,8 +100,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-ink/50 mb-2">Email</h3>
-                      <a href="mailto:alzinaattorneys@gmail.com" className="text-lg text-ink-muted hover:text-accent transition-colors">
-                        alzinaattorneys@gmail.com
+                      <a href="mailto:alzinaattorneys@yahoo.com" className="text-lg text-ink-muted hover:text-accent transition-colors">
+                        alzinaattorneys@yahoo.com
                       </a>
                     </div>
                   </div>

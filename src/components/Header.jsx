@@ -127,11 +127,14 @@ export default function Header() {
             </nav>
             <div className="mt-auto pt-8 border-t border-border">
               <p className="text-sm text-ink-muted mb-4 uppercase tracking-widest font-bold">Get in touch</p>
-              <a href="mailto:alzinaattorneys@gmail.com" className="block text-xl font-serif font-medium text-ink hover:text-accent mb-2">
-                alzinaattorneys@gmail.com
+              <a href="mailto:alzinaattorneys@yahoo.com" className="block text-xl font-serif font-medium text-ink hover:text-accent mb-2">
+                alzinaattorneys@yahoo.com
               </a>
-              <a href="tel:+2348032283805" className="block text-xl font-serif font-medium text-ink hover:text-accent">
+              <a href="tel:+2348032283805" className="block text-xl font-serif font-medium text-ink hover:text-accent mb-2">
                 +234 803 228 3805
+              </a>
+              <a href="tel:+2348034401838" className="block text-xl font-serif font-medium text-ink hover:text-accent">
+                +234 803 440 1838
               </a>
             </div>
           </motion.div>

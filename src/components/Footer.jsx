@@ -202,26 +202,34 @@ export default function Footer() {
               <li className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-1" />
                 <span className="text-base font-serif font-light text-ink-muted leading-relaxed">
-                  60 Old Market Road, <br />
+                  70B Old Market Road, <br />
                   Onitsha, Nigeria
                 </span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <a
-                  href="tel:+2348032283805"
-                  className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
-                >
-                  +234 803 228 3805
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+2348032283805"
+                    className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
+                  >
+                    +234 803 228 3805
+                  </a>
+                  <a
+                    href="tel:+2348034401838"
+                    className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
+                  >
+                    +234 803 440 1838
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a
-                  href="mailto:alzinaattorneys@gmail.com"
+                  href="mailto:alzinaattorneys@yahoo.com"
                   className="text-base font-serif font-light text-ink-muted hover:text-accent transition-colors"
                 >
-                  alzinaattorneys@gmail.com
+                  alzinaattorneys@yahoo.com
                 </a>
               </li>
             </ul>

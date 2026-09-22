@@ -172,7 +172,7 @@ Layout: a filterable/searchable grid or an accordion list (accordion works well 
 ### 6.3 About Us (`/about`)
 
 - Firm history/positioning narrative (2–4 short paragraphs — write in a confident, understated tone; do not invent a founding year or specific historical claims that weren't provided — keep it generic ("Alzina Attorneys was established to provide...") unless the user supplies real firm history).
-- **Principal profile section:** principal's photo (the optimized asset), name(Paschal Alzina, Esq.), title, a short bio paragraph, and optionally credentials/bar admissions as a bullet list (leave as clearly-marked placeholder bullets — `[Add bar admission]`, `[Add year called to bar]` — since none were supplied, so Antigravity doesn't fabricate credentials).
+- **Principal profile section:** principal's photo (the optimized asset), name (Pascal Zimuzo Ozuligbo, Esq.), title, a short bio paragraph, and credentials (LL.B from Chukwuemeka Odumegwu Ojukwu University, B.A from Nnamdi Azikiwe University, Diploma in French from Université D’Abomey Calavi).
 - Optional: supporting team/associates grid below the principal (photo, name, title) — build the component so it's easy to add more people later even if only the principal's data exists today.
 - Values/approach section reusing or extending the homepage's value props with more depth.
 
@@ -181,7 +181,7 @@ Layout: a filterable/searchable grid or an accordion list (accordion works well 
 Two-column layout on desktop (stacked on mobile):
 
 **Left column — details:**
-- Address: **60 Old Market Road, Onitsha**
+- Address: **70B Old Market Road, Onitsha**
 - Phone/WhatsApp button (see 8.3)
 - Email address (use the same firm email as the form destination once confirmed)
 - Office hours - 9 am to 5 pm. Monday to Fridays.
@@ -194,7 +194,7 @@ Two-column layout on desktop (stacked on mobile):
   - Email field placeholder: `"e.g. chi.okonkwo@gmail.com"`
   - Subject field placeholder: `"e.g. Commercial lease dispute"`
   - Message field placeholder: `"e.g. I need advice on a breach of contract relating to a supply agreement..."`
-- Submits via Formspree (`@formspree/react` `useForm`), destination email - alzinaattorneys@gmail.com.
+- Submits via Formspree (`@formspree/react` `useForm`), destination email - alzinaattorneys@yahoo.com.
 - On success: inline confirmation state (not just an alert) — "Thank you, [name]. We'll be in touch within 1 business day." with a subtle Motion success animation (checkmark draw-in).
 - Client-side validation (required fields, email format) before submit; disable the submit button and show a loading state during submission.
 
@@ -314,7 +314,8 @@ https://wa.me/2348032283805?text=<url-encoded message>
 ## 11. OPEN QUESTIONS FOR THE CLIENT (surface these, don't silently guess)
 
 - Real firm history/founding details for the About page (currently generic placeholder copy).
-- Principal's full name, title, credentials/bar admissions for the About page and hero overlay.
+- Principal's full name: Pascal Zimuzo Ozuligbo.
+- Credentials: LL.B (Chukwuemeka Odumegwu Ojukwu University, Igbariam), B.A International Relations (Nnamdi Azikiwe University, Awka), Diploma in French (Université D’Abomey Calavi, Benin Republic).
 - Whether a real logo mark/monogram exists for favicon generation, or whether one should be derived from the wordmark.
 
 
