@@ -37,7 +37,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768 && mobileMenuOpen) {
+      if (window.innerWidth >= 1024 && mobileMenuOpen) {
         setMobileMenuOpen(false);
       }
     };
@@ -55,7 +55,7 @@ export default function Header() {
           isScrolled ? 'py-1' : 'py-2 md:py-3'
         }`}
       >
-        <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="w-full max-w-[1600px] mx-auto px-6 lg:px-12 flex items-center justify-between">
           <Link to="/" className="z-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm" onClick={() => setMobileMenuOpen(false)}>
             <motion.div
               animate={{ scale: isScrolled ? 0.85 : 1, transformOrigin: 'left center' }}
@@ -67,7 +67,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <Link to="/about" className="text-ink font-serif text-lg hover:text-accent hover:italic transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-2">
               About Us
             </Link>
@@ -86,7 +86,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile Toggle */}
-          <div className="md:hidden flex items-center gap-4 z-50">
+          <div className="lg:hidden flex items-center gap-4 z-50">
             <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
