@@ -1,9 +1,11 @@
 import { useRef } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { useForm } from '@formspree/react';
 
 export default function Contact() {
   const containerRef = useRef(null);
+  const [state, handleSubmit] = useForm("alzina-form"); // Replace with actual Formspree ID when ready
 
   return (
     <div className="w-full bg-bg" ref={containerRef}>
@@ -148,68 +150,84 @@ export default function Contact() {
                   Please fill out the form below with details about your inquiry, and a member of our team will get back to you shortly.
                 </p>
 
-                <form id="consultation" className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Name */}
+                {state.succeeded ? (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+                    className="bg-accent/10 border border-accent p-6 flex flex-col items-center justify-center text-center rounded-sm"
+                  >
+                    <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mb-4">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-serif text-ink mb-2">Message Sent</h3>
+                    <p className="text-ink-muted">Thank you. We will be in touch within 5 business day.</p>
+                  </motion.div>
+                ) : (
+                  <form id="consultation" className="space-y-8" onSubmit={handleSubmit}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      {/* Name */}
+                      <div className="space-y-2">
+                        <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-ink/70">Full Name</label>
+                        <input 
+                          type="text" 
+                          id="name" 
+                          name="name" 
+                          placeholder=" Chiamaka Okonkwo" 
+                          required
+                          className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors"
+                        />
+                      </div>
+                      {/* Email */}
+                      <div className="space-y-2">
+                        <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-ink/70">Email Address</label>
+                        <input 
+                          type="email" 
+                          id="email" 
+                          name="email" 
+                          placeholder=" chi.okonkwo@gmail.com" 
+                          required
+                          className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Subject */}
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-xs font-bold uppercase tracking-widest text-ink/70">Full Name</label>
+                      <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-ink/70">Subject / Title</label>
                       <input 
                         type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder=" Chiamaka Okonkwo" 
+                        id="subject" 
+                        name="subject" 
+                        placeholder=" Community Land Dispute" 
                         required
                         className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors"
                       />
                     </div>
-                    {/* Email */}
+
+                    {/* Message */}
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-ink/70">Email Address</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder=" chi.okonkwo@gmail.com" 
+                      <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-ink/70">Message</label>
+                      <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="5"
+                        placeholder=" Counsel I need advice on..." 
                         required
-                        className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors"
-                      />
+                        className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors resize-none"
+                      ></textarea>
                     </div>
-                  </div>
 
-                  {/* Subject */}
-                  <div className="space-y-2">
-                    <label htmlFor="subject" className="text-xs font-bold uppercase tracking-widest text-ink/70">Subject / Title</label>
-                    <input 
-                      type="text" 
-                      id="subject" 
-                      name="subject" 
-                      placeholder=" Community Land Dispute" 
-                      required
-                      className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors"
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div className="space-y-2">
-                    <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-ink/70">Message</label>
-                    <textarea 
-                      id="message" 
-                      name="message" 
-                      rows="5"
-                      placeholder=" Counsel I need advice on..." 
-                      required
-                      className="w-full bg-bg border-b border-border py-3 px-0 text-ink placeholder:text-ink/30 focus:outline-none focus:border-accent transition-colors resize-none"
-                    ></textarea>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button 
-                    type="submit" 
-                    className="w-full md:w-auto px-10 py-4 bg-accent text-white font-medium tracking-wide hover:bg-oxblood-700 transition-colors"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                    {/* Submit Button */}
+                    <button 
+                      type="submit" 
+                      disabled={state.submitting}
+                      className="w-full md:w-auto px-10 py-4 bg-accent text-white font-medium tracking-wide hover:bg-oxblood-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    >
+                      {state.submitting ? 'Sending...' : 'Send Message'}
+                    </button>
+                  </form>
+                )}
               </motion.div>
             </div>
             
