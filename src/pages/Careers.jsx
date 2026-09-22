@@ -54,31 +54,50 @@ export default function Careers() {
       </section>
 
       {/* 2. Opportunities Section */}
-      <section className="relative py-24 md:py-32 px-6 md:px-12 bg-bg text-ink overflow-hidden">
-        {/* Subtle Watermark */}
-        <div className="absolute -left-[10%] top-40 text-[20rem] font-serif text-bg-subtle select-none z-0 -rotate-6 whitespace-nowrap">
-          Careers
+      <section className="relative py-24 md:py-32 px-6 md:px-12 bg-bg text-ink">
+        {/* Subtle Watermark - Wrapped to prevent overflow without breaking sticky */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+          <div className="absolute left-[-10%] top-40 text-[20rem] font-serif text-bg-subtle select-none -rotate-6 whitespace-nowrap">
+            Careers
+          </div>
         </div>
 
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
             
-            {/* Left Column: Abstract Image */}
+            {/* Left Column: Abstract Animated Globe */}
             <div className="hidden lg:block lg:w-5/12 shrink-0 sticky top-32">
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="aspect-[3/4] overflow-hidden rounded-sm shadow-2xl relative"
+              <div 
+                className="aspect-3/4 relative flex items-center justify-center bg-transparent"
+                style={{ perspective: '1000px' }}
               >
-                <div className="absolute inset-0 bg-oxblood-900/10 mix-blend-overlay z-10"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=1000&q=80" 
-                  alt="Legal Profession Abstract" 
-                  className="w-full h-full object-cover object-center grayscale opacity-90 hover:scale-105 hover:grayscale-0 transition-all duration-700 ease-out"
-                />
-              </motion.div>
+                {/* The Rotating 3D Globe */}
+                <motion.div 
+                  className="relative w-64 h-64 md:w-80 md:h-80 z-10"
+                  style={{ transformStyle: 'preserve-3d' }}
+                  animate={{ rotateY: 360, rotateX: 360 }}
+                  transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+                >
+                  {/* Vertical Rings (Meridians) */}
+                  {[0, 30, 60, 90, 120, 150].map((angle) => (
+                    <div
+                      key={`y-${angle}`}
+                      className="absolute inset-0 border border-accent/40 rounded-full"
+                      style={{ transform: `rotateY(${angle}deg)` }}
+                    />
+                  ))}
+                  {/* Horizontal Rings (Latitudes) - simulated by rotating X */}
+                  {[0, 30, 60, 90, 120, 150].map((angle) => (
+                    <div
+                      key={`x-${angle}`}
+                      className="absolute inset-0 border border-ink/10 rounded-full"
+                      style={{ transform: `rotateX(${angle}deg)` }}
+                    />
+                  ))}
+                  {/* Core solid dot */}
+                  <div className="absolute top-1/2 left-1/2 w-2 h-2 -ml-1 -mt-1 bg-accent rounded-full" style={{ transform: 'translateZ(0px)' }}></div>
+                </motion.div>
+              </div>
             </div>
 
             {/* Right Column: Content */}
@@ -94,8 +113,8 @@ export default function Careers() {
               >
                 <div className="border-b-2 border-border pb-6 mb-8 relative">
                   <h2 className="text-4xl md:text-5xl font-serif text-ink mb-2">Lawyers</h2>
-                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Experienced & Associates</p>
-                  <div className="absolute bottom-[-2px] left-0 w-24 h-[2px] bg-accent"></div>
+                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Associates</p>
+                  <div className="absolute -bottom-0.5 left-0 w-24 h-0.5 bg-accent"></div>
                 </div>
                 
                 <div className="prose prose-lg md:prose-xl text-ink-muted leading-relaxed font-light space-y-6">
@@ -108,20 +127,9 @@ export default function Careers() {
                   <p>
                     Alzina Attorneys offers the opportunity to further develop your legal skills while working on exciting and cutting edge issues of law. We provide training in various practice areas and a chance to continually learn from contemporaries and partners through regular networking events, training and seminars.
                   </p>
-                </div>
-                
-                <div className="pt-4">
-                  <Link 
-                    to="/contact#consultation" 
-                    className="inline-flex items-center gap-4 group"
-                  >
-                    <span className="text-sm font-bold uppercase tracking-widest text-accent group-hover:text-oxblood-700 transition-colors">
-                      Apply for a position
-                    </span>
-                    <div className="w-10 h-10 rounded-full border border-accent flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all text-accent">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </Link>
+                  <p>
+                    To apply for a position, please <Link to="/contact#consultation" className="text-accent underline decoration-accent/50 underline-offset-4 hover:text-oxblood-700 transition-colors">click here</Link>.
+                  </p>
                 </div>
               </motion.div>
 
@@ -136,7 +144,7 @@ export default function Careers() {
                 <div className="border-b-2 border-border pb-6 mb-8 relative">
                   <h2 className="text-4xl md:text-5xl font-serif text-ink mb-2">Internships</h2>
                   <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Students & Undergraduates</p>
-                  <div className="absolute bottom-[-2px] left-0 w-24 h-[2px] bg-accent"></div>
+                  <div className="absolute -bottom-0.5 left-0 w-24 h-0.5 bg-accent"></div>
                 </div>
                 
                 <div className="prose prose-lg md:prose-xl text-ink-muted leading-relaxed font-light space-y-6">
@@ -147,22 +155,8 @@ export default function Careers() {
                     Our programmes are a blend of practical and theoretical experiences that expose interns to diverse developments in the legal industry.
                   </p>
                   <p>
-                    We are currently accepting applications for our upcoming internship cycle.
+                    We are currently accepting applications for our upcoming internship cycle. To apply, <Link to="/contact#consultation" className="text-accent underline decoration-accent/50 underline-offset-4 hover:text-oxblood-700 transition-colors">click here</Link>.
                   </p>
-                </div>
-                
-                <div className="pt-4">
-                  <Link 
-                    to="/contact#consultation" 
-                    className="inline-flex items-center gap-4 group"
-                  >
-                    <span className="text-sm font-bold uppercase tracking-widest text-accent group-hover:text-oxblood-700 transition-colors">
-                      Apply for internship
-                    </span>
-                    <div className="w-10 h-10 rounded-full border border-accent flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all text-accent">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </Link>
                 </div>
               </motion.div>
 
