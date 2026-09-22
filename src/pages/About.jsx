@@ -27,7 +27,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-display font-serif text-white drop-shadow-md"
           >
-            About The Firm
+            About Our Firm
           </motion.h1>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function About() {
 
                 {/* Certifications */}
                 <div className="border-t border-white/20 pt-10">
-                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-8">Certifications</h3>
+                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-ink-muted mb-8">Certifications</h3>
                   <div className="space-y-6">
                     <p className="text-xl md:text-2xl text-white/90 font-serif italic border-l-[3px] border-accent pl-6">
                       LL.B, Nnamdi Azikiwe University, Awka
@@ -127,7 +127,7 @@ export default function About() {
 
                 {/* Professional Associations */}
                 <div className="border-t border-white/20 pt-10">
-                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-accent mb-8">Professional Associations</h3>
+                  <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-ink-muted mb-8">Professional Associations</h3>
                   <div className="space-y-6">
                     <p className="text-xl md:text-2xl text-white/90 font-serif italic border-l-[3px] border-accent pl-6">
                       Nigerian Bar Association

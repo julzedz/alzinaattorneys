@@ -3,7 +3,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import onitshaImg from '../assets/onitsha.webp';
 
 const SLIDES = [
   {
@@ -11,7 +10,8 @@ const SLIDES = [
     headline: "Securing Your Assets",
     subhead:
       "Comprehensive and seamless property management. We manage your real estate so you can focus on growth.",
-    image: onitshaImg,
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80",
   },
   {
     id: 2,
