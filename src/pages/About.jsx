@@ -91,7 +91,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-oxblood-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                   <img
                     src={principalImg}
-                    alt="Paschal Alzina, Esq."
+                    alt="Pascal Zimuzo Ozuligbo, Esq."
                     className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
